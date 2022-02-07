@@ -1,0 +1,1471 @@
+$header_color:#4c4c4c;
+$orange:#E23E1D;
+$top_back:#f5f5f5;
+$nav-color:#222222;
+$white:#ffffff;
+$black:#000000;
+$light-grey:#888;
+$dark:#212529;
+$red:#E23E1D;
+$light-grey-2:#ebebeb;
+$black-light:#191919;
+$golden:#fac451;
+$foot:#f0f2f9;
+$light-gray-3:#eeeeee;
+$grey-black:#252525;
+$dark_red:#b53217;
+$smoke:#e6e6e6;
+$grey-hed:#252525;
+$del:#b7b7b7;
+$nav-grey:#777777;
+$title:#272727;
+$small:#999999;
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Rubik', sans-serif;
+}
+@mixin button {
+    outline: none;
+    border: none;
+    padding: 8px 16px;
+    background-color: transparent;
+    color: $black-light;
+}
+@mixin after {
+    content: "";
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 80px;
+    height: 3px;
+    background-color: $orange;    
+}
+#set{
+    width: 1150px;
+    position: absolute;
+    left: 0%;
+    right: 0%;
+    transform: translate(-35%);
+}
+#set-2{
+    width: 550px;
+}
+.c-col{
+    color: $golden;
+}
+.cent{
+    word-spacing: 4px;
+}
+#quick{
+    position: absolute;
+    bottom:15px;
+}
+.header{
+    background-color: $top_back;
+    .container{
+        .row{
+            .col-md-6{
+                .header-left-top{
+                    font-size: 13px;
+                    text-transform: uppercase;
+                    flex: 0 0 50%;
+                    color: $header_color;
+                }
+                .header-call{
+                    font-size: 13px;
+                    text-transform: capitalize;
+                    color: $header_color;
+                }
+            }
+            .col-md-6{
+                .header-right-top{
+                 color: $header_color;   
+                 font-size: 13px;
+                 flex: 0 0 20%;
+                 cursor: pointer;
+                }
+                .icons{
+                    .fab{
+                        font-size: 13px;
+                        padding-left: 15px;
+                        cursor: pointer;
+                        &:hover{
+                            color: $orange;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+.container{
+    .row{
+        .col-md-3{
+            .logo{
+                img{
+                    width: 75%;
+                    object-fit: cover;
+                }
+            }
+        }
+        .col-md-7{
+            .navbar{
+                .container-fluid{
+                    .collapse{
+                        .navbar-nav{
+                            .nav-item{
+                                padding-left: 20px;
+                                a{
+                                    color: $nav-color;
+                                    font-size:14px;
+                                    text-transform: uppercase;
+                                    font-weight: 500;
+                                    &:hover{
+                                        color: $orange;
+                                    }
+                                    .fas{
+                                        font-size: 12px;
+                                    }
+                                }
+                                .dropdown-menu{
+                                    width: 200px;
+                                    .dropdown-item{
+                                        color: $light-grey;
+                                        text-transform: capitalize;
+                                        font-weight: 400;
+                                        padding-top: 15px;
+                                        &:hover{
+                                            color: $white;
+                                            background-color: $dark;
+                                        }
+                                    }
+                                }
+                                .col-md-2,
+                                .col-md-5{   
+                                    h5{
+                                        color: $top_back;
+                                        font-size: 14px;
+                                        padding: 10px;
+                                        border-bottom: 1px solid $light-grey;
+                                        text-transform: uppercase;
+                                    }
+                                }
+                                .col-md-2{
+                                    img{
+                                        width: 300px;
+                                        padding: 25px 10px 10px 10px;
+                                        object-fit:cover;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .col-md-2{
+            li{
+                list-style-type: none;
+                padding: 2px;
+                a{
+                    text-decoration: none;
+                    color: $nav-color;
+                    font-size: 14px;
+                    &:hover{
+                        color: $orange;
+                    }
+                }
+            }
+        }
+    }
+}
+@media all and (min-width: 992px) 
+{
+	.navbar .nav-item .dropdown-menu
+    { 
+        display: none; 
+    }
+	.navbar .nav-item:hover .dropdown-menu{ 
+        display: block; 
+    }
+	.navbar .nav-item .dropdown-menu{ 
+        margin-top:0; 
+    }
+}	
+.container{
+    .row{
+        .col-md-3{
+            .navbar{
+                .nav{
+                    .nav-item{
+                        padding-left: 14px;
+                        a{
+                            padding: 15px 25px;
+                            color: $white;
+                            width: 220px;
+                            font-size: 13px;
+                            background-color: $red;
+                            text-transform: uppercase;
+                            font-weight: 500;
+                            .fas{
+                                padding-right: 10px;
+                                font-size: 16px;
+                            }
+                        }
+                        .dropdown-menu{
+                            border-radius: 0;
+                            a{
+                                color: $black;
+                                font-size: 13px;
+                                background-color: $white;
+                                margin: 0;
+                                padding: 0;
+                                border-bottom: 2px solid $top_back;
+                                padding: 10px 0;
+                                width: 200px;
+                                text-transform: capitalize;
+                                z-index: 9999;
+                                &:hover{
+                                    color: $orange;
+                                }
+                                .fas{
+                                    padding-right: 10px;
+                                    font-size: 15px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .col-md-6{
+            .inpt{
+                position: relative;
+                input[type=text]{
+                    border: none;
+                    outline: none;
+                    border: 1px solid $light-grey-2;
+                    padding: 8px;
+                    height:40px;
+                    width: 100%;
+                    font-size: 13px;
+                }
+            }
+            button{
+                position: absolute;
+                right:9px;
+                bottom: 8px;
+                background-color: $orange;
+                color: $white;
+                outline: none;
+                border: none;
+                border-radius:0;
+                height: 40px;
+                width: 120px;
+                letter-spacing: 2px;
+                text-transform: uppercase;
+                font-size: 14px;
+            }
+        }
+        .col-md-3{
+            span{
+                color: $nav-color;
+                font-size: 15px;
+                padding: 0 10px;
+            }
+            .fas,.far{
+                margin-left: 6px;
+                cursor: pointer;
+                font-size: 20px;
+            }
+        }
+    }
+}
+.container{
+    .row{
+        .col-md-8{
+            .carousel{
+                .carousel-inner{
+                    .carousel-item{
+                        img{
+                            width: 100%;
+                            object-fit: cover;
+                            z-index: -1;
+                        }
+                        .content{
+                            position: absolute;
+                            top: 30%;
+                            left:14%;
+                            h2{
+                                color: $nav-color;
+                                font-size: 36px;
+                                text-transform: uppercase;
+                            }
+                            p{
+                                font-size: 14px;
+                                color: $light-grey;
+                            }
+                            .text{
+                                width:120px;
+                                a{
+                                    text-decoration: none;
+                                    color: $orange;                               }
+                                    padding: 8px 8px 8px 20px;
+                                    text-transform: uppercase;
+                                    border: 2px solid $orange;
+                                    border-radius: 30px;
+                                    font-weight: 400px;
+                                    cursor: pointer;
+                                    &:hover a{
+                                        color: $black;
+                                     }
+                                }
+                            }
+                        }
+                    }
+                }
+            .carousel-control-prev,
+            .carousel-control-next{
+                .fas{
+                    color: $black;
+                    font-size: 30px;
+                    padding: 10px 15px;
+                    background-color: $white;
+                    &:hover{
+                        color: $white;
+                        background-color: $dark
+                    }
+                }
+            }
+        }
+        .col-md-2{
+            .hold{
+                display: grid;
+                grid-template-columns: repeat(2,1fr);
+                grid-gap: 10px;
+                .holder{
+                    position: relative;
+                    img{
+                        width: 220px;
+                        height: 220px;
+                        object-fit: cover;
+                    }
+                    .holder-content{
+                        position: absolute;
+                        top:30px;
+                        left: 20px;
+                        h4{
+                            color: $orange;
+                            font-size: 16px;
+                        }
+                        p{
+                            font-size: 15px;
+                            color: $black-light;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+.container{
+    .row{
+        .col-md-3{
+            .deal{
+                h3{
+                    font-size: 18px;
+                    font-weight: 500;
+                    position: relative;
+                    word-spacing: 0;
+                    line-height: 1;
+                    padding-bottom:15px ;
+                    border-bottom: 1px solid #ebebeb;
+                }
+                :after{
+                    content:"";
+                    height: 3px;
+                    width: 70px;
+                    background-color: $orange;
+                    position: absolute;
+                    bottom: -1px;
+                    left: 0;
+                }
+            }
+            .carousel{
+                margin-top: 30px;
+                border: 2px solid $orange;
+                .carousel-inner{
+                    &:hover{
+                        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+                    }
+                    .carousel-item{
+                        height: 370px;
+                        &:hover .btn{ 
+                            visibility: visible;
+                            opacity: 1;
+                            transition: all 0.7s;
+                            bottom: 100px;
+                        }
+                        img{
+                            padding: 40px;
+                            width: 100%;
+                            object-fit: cover;
+                        }
+                        .carousel-text{
+                            position: absolute;
+                            top: 10px;
+                            left: 20px;
+                            span{
+                                font-size: 14px;
+                                color: $header_color;
+                            }
+                            h3{
+                                color: $orange;
+                                font-size: 15px;
+                            }
+                        }
+                        .carousel-off{
+                            display: flex;
+                            justify-content: space-between;
+                            span{
+                                color: $orange;
+                                font-size: 14px;
+                                text-transform: lowercase;
+                                font-weight: 500;
+                                em{
+                                    color: $orange;
+                                    font-weight: 500;
+                                    font-size: 14px;
+                                }
+                                .far{
+                                    font-size: 10px;
+                                    word-spacing: 0;
+                                    word-wrap: nowrap;
+                                }
+                            }
+                        }
+                        .expired{
+                            text-align: center;
+                            p{
+                                font-size: 14px;
+                                color: $header_color;
+                            }
+                        }
+                        .btn{
+                            position: absolute;
+                            bottom: 40%;
+                            left: 50px;
+                            visibility: hidden;
+                            opacity: 0;
+                            button{
+                                @include button;
+                                background-color: $light-gray-3;
+                                text-transform: uppercase;
+                                font-weight: 500;
+                                width: 140px;
+                            }
+                        }
+                    }
+                }
+                .carousel-control-prev-1{
+                    background-color:$light-gray-3;
+                    color: $black;
+                    position: absolute;
+                    top:-20%;
+                    padding: 3px 8px;
+                    right: 15%;
+                    .fas{
+                        font-size: 17px;
+                    }
+                }
+                .carousel-control-next-1{
+                    background-color:$light-gray-3;
+                    color: $black;
+                    position: absolute;
+                    top:-20%;
+                    padding: 3px 8px;
+                    right:0%;
+                    .fas{
+                        font-size: 17px;
+                    }
+                }
+            }
+            .sale-up{
+                img{
+                    object-fit: cover;
+                    width: 100%;
+                }
+            }
+            .latest-product{
+                h3{
+                    border-bottom: 1px solid $light-grey-2;
+                    font-size:18px;
+                    font-weight:500;
+                    position: relative;
+                    padding-bottom: 16px;
+                }
+                :after{
+                    content: "";
+                    position: absolute;
+                    bottom: -1px;
+                    left: 0;
+                    width: 80px;
+                    height: 3px;
+                    background-color: $orange;
+                }
+            }
+            .col-md-3{
+                .crd-3{
+                    width: 260px;
+                    border: 1px solid $light-grey-2;
+                    .crd-2-main{
+                        display: flex;
+                        justify-content: space-evenly;
+                        padding: 17px;
+                        line-height: 20px;
+                        .asci-hold{
+                            img{
+                                width: 70px;
+                            }
+                        }
+                        .asci-text{
+                            p{
+                                font-size:14px;
+                                font-weight: 500;
+                                cursor: pointer;
+                                &:hover{
+                                    color: $orange;
+                                }
+                            }
+                        }
+                        .tet{
+                            span{
+                                color: $orange;
+                                font-weight: 500;
+                                font-size:14px;
+                            }
+                        }
+                    }
+                }
+            }
+            .col-md-3{
+                .crd-4{
+                    border: 1px solid $light-gray-3;
+                    width: 260px;
+                    line-height: 10px;
+                    padding: 10px;
+                    .crd-4-main{
+                        display: flex;
+                        justify-content: space-evenly;
+                        .asci-hold-4{
+                            img{
+                                width: 40px;
+                                object-fit: cover;
+                            }
+                        }
+                        .asci-text-4{
+                            h4{
+                                font-size:16px;
+                                font-weight: 500;
+                            }
+                            p{
+                                font-size:13px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .col-md-9{
+            .top{
+                h3{
+                    font-size: 18px;
+                    font-weight: 500;
+                    position: relative;
+                    word-spacing: 0;
+                    line-height: 1;
+                    padding-bottom:15px ;
+                    border-bottom: 1px solid #ebebeb;
+                }
+                :after{
+                    content:"";
+                    height: 3px;
+                    width: 70px;
+                    background-color: $orange;
+                    position: absolute;
+                    bottom: -1px;
+                    left: 0;
+                }
+            }
+            .owl-carousel-1{
+                .item{
+                    position: relative;
+                    img{
+                        width: 100%;
+                        object-fit: cover;
+                    }
+                    .coroul-text{
+                        position: absolute;
+                        bottom: 10px;
+                        left: 15px;
+                        a{
+                            text-decoration: none;
+                            color: $black-light;
+                            font-size: 15px;
+                        }
+                    }
+                }
+                .owl-nav{
+                    position: absolute;
+                    top: -40%;
+                    right: 0;
+                    .owl-prev,
+                    .owl-next{
+                        color: $black-light;
+                        font-size: 17px;
+                        background-color: $light-gray-3;
+                        width: 20px;
+                        height: 30px;
+                    }
+                }
+            }
+            .nav{
+                .nav-item{
+                    a{
+                        color: $black-light;
+                        font-size: 18px;
+                        border-bottom: 1px solid $light-gray-3;
+                        width:100%;
+                    }
+                    .active{
+                        border-bottom:2px solid $orange; 
+                        width:100%;
+                        font-weight: bold;
+                    }
+                }
+                .tab-content{
+                    .tab-pane{
+                        .crd{
+                            display: grid;
+                            grid-template-columns: repeat(3,1fr);
+                            grid-gap: 30px;
+                            padding-top: 20px;
+                            .crd-back{
+                                border: 1px solid $light-grey-2;
+                                height: 400px;
+                                width: 250px;
+                                overflow: hidden;
+                                &:hover{
+                                    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+                                }
+                                .crd-main{
+                                    position: relative;
+                                    &:hover .btn-1{
+                                        visibility: visible;
+                                        opacity: 1;
+                                        transition: all 0.4s;
+                                        bottom: 90px;
+                                    }
+                                    &:hover .btn-3{
+                                        visibility: visible;
+                                        opacity: 1;
+
+                                    }
+                                    img{
+                                        object-fit: cover;
+                                        width: 100%;
+                                    }
+                                    .crd-content{
+                                        left: 20px;
+                                        position: absolute;
+                                        padding-top: 20px;
+                                        top: 0;
+                                        h5{
+                                            font-size: 12px;
+                                            text-transform: uppercase;
+                                            color: $header_color;
+                                        }
+                                        p{
+                                            color: $grey-black;
+                                            font-size: 14px;
+                                            font-weight: 500;
+                                            cursor: pointer;
+                                            &:hover{
+                                                color: $orange;
+                                            }
+                                        }
+                                    }
+                                    .hr-1{
+                                        width: 80%;
+                                        margin: 0 auto;
+                                        background-color: $light-grey;
+                                    }
+                                    .crd-price{
+                                        display: flex;
+                                        justify-content: space-between;
+                                        padding: 10px;
+                                        span{
+                                            color: $orange;
+                                            font-size: 15px;
+                                            font-weight: 500;
+                                            em{
+                                                color: $orange;
+                                                font-size: 15px;
+                                                font-weight: 500;
+                                            }
+                                            .far{
+                                                font-size: 10px;
+                                            }
+                                        }
+                                    }
+                                    .btn-1{
+                                        position: absolute;
+                                        bottom: 28%;
+                                        left:20px;
+                                        visibility: hidden;
+                                        opacity: 0;
+                                        button{
+                                            @include button;
+                                            width: 200px;
+                                            background-color: $light-gray-3;
+                                            font-size: 14px;
+                                            text-transform: uppercase;
+                                            font-weight: 500;
+                                            &:hover{
+                                                background-color: $light-grey;
+                                                color: $white;
+                                            }
+                                        }
+                                    }
+                                    .btn-3{
+                                        visibility: hidden;
+                                        opacity: 0;
+                                        .but-1{
+                                            @include button;
+                                            width: 140px;
+                                            background-color: $red;
+                                            color: $white;
+                                            border-radius: 20px;
+                                            &:hover{
+                                                background-color: $dark_red;
+                                                color: $white;
+                                            }
+                                        }
+                                        .but-2{
+                                            @include button;
+                                            margin-left: 3px;
+                                            border: 1px solid $smoke;
+                                            border-radius: 50px;
+                                            width: 40px;
+                                            height: 40px;
+                                            &:hover{
+                                                background-color: $red;
+                                                color: $white;
+                                            }
+                                            &:hover .far{
+                                                background-color: $red;
+                                                color: $white;
+                                            }
+                                            .far{
+                                                transform: translate(-5px);
+                                                font-size:16px;
+                                                color: $red;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .tab-pane{
+                        .sale-product{
+                            display: grid;
+                            grid-template-columns: repeat(3,1fr);
+                            grid-gap: 30px;
+                            .sale-product-main{
+                                img{
+                                    object-fit: cover;
+                                }
+                                .sale-content{
+                                    padding:0 30px;
+                                    h4{
+                                        font-size:19px;
+                                    }
+                                    del{
+                                        font-size:14px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .seprate-holder{
+                position: relative;
+                line-height: 20px;
+                img{
+                    object-fit: cover;
+                    width: 260px;
+                    height:160px;
+                }
+                .sep-text{
+                    position: absolute;
+                    top: 0%;
+                    left: 10px;
+                    p{
+                        color: $orange;
+                        font-size:15px;
+                        font-weight:500;
+                    }
+                    del{
+                        font-size:14px;
+                        color: $del;
+                        font-weight: 400;
+                    }
+                }
+                h4{
+                    font-size:16px ;
+                    color: $black-light;
+                    font-weight: 300;
+                }
+                strong{
+                    font-weight: 600;
+                }
+                .bt-5{
+                    position: absolute;
+                    bottom: 0;
+                    padding: 20px;
+                    button{
+                        @include button;
+                        border: 2px solid $orange;
+                        border-radius: 20px;
+                        text-transform: uppercase;
+                        font-weight: 500;
+                        &:hover{
+                            color: $white;
+                            background-color: $orange;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .best-seller{
+        margin-top: 30px;
+        h3{
+            font-size:20px;
+            color:$grey-hed;
+            border-bottom:1px solid $light-gray-3;
+            padding-bottom: 15px;
+            position:relative;
+        }
+        :after{
+            @include after;
+        }
+    }
+}
+.crd-4{
+    .owl-carousel-2{
+            .item{
+                position:relative;
+                margin-right: 15px;
+                height: 420px;
+                img{
+                    padding: 20px;
+                }
+                &:hover{
+                    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+                }
+                &:hover .btn-1{
+                    visibility: visible;
+                    opacity: 1;
+                    transition: all 0.4s linear;
+                    bottom: 115px;
+                }
+                &:hover .btn-3{
+                    visibility: visible;
+                    opacity: 1;
+                }
+                .crd-content{
+                    position: absolute;
+                    top: 15px;
+                    left: 2px;
+                    padding:0 10px;
+                    h5{
+                        font-size:12px;
+                        color: $header_color;
+                        text-transform: uppercase;
+                    }
+                    p{
+                        color: $grey-black;
+                        font-size: 14px;
+                        font-weight: 500;
+                    }
+                }
+                .hr-1{
+                    width: 80%;
+                    margin: 0 auto;
+                }
+                .crd-price{
+                    margin:10px 0;
+                    span{
+                        color: $orange;
+                        font-weight:500;
+                        font-size:15px;
+                        .far{
+                            font-size:10px;
+                        }
+                    }
+                    del{
+                        font-size:13px;
+                    }
+                }
+                .btn-1{
+                    position: absolute;
+                    bottom: 40%;
+                    left: 10%;
+                    visibility: hidden;
+                    opacity: 0;
+                    button{
+                        @include button;
+                        width: 205px;
+                        background-color: $light-grey-2;
+                        font-size:14px;
+                        text-transform: uppercase;
+                        font-weight: 500;
+                        &:hover{
+                            background-color: $light-grey;
+                            color: $white;
+                        }
+                    }
+                }
+                .btn-3{
+                    visibility: hidden;
+                    opacity: 0;
+                    .but-1{
+                        @include button;
+                        width: 140px;
+                        background-color: $red;
+                        color: $white;
+                        border-radius: 20px;
+                        &:hover{
+                            background-color: $dark_red;
+                            color: $white;
+                        }
+                    }
+                    .but-2{
+                        @include button;
+                        margin-left: 3px;
+                        border: 1px solid $smoke;
+                        border-radius: 50px;
+                        width: 40px;
+                        height: 40px;
+                        &:hover{
+                            background-color: $red;
+                            color: $white;
+                        }
+                        &:hover .far{
+                            background-color: $red;
+                            color: $white;
+                        }
+                        .far{
+                            transform: translate(-5px);
+                            font-size:16px;
+                            color: $red;
+                        }
+                    }
+                }
+            }
+            .owl-nav{
+                position: absolute;
+                top: -14% !important;
+                right: 20px !important;
+                .owl-prev,
+                .owl-next{
+                    color: $black-light;
+                    font-size: 30px;
+                    background-color: $light-gray-3;
+                    width: 20px;
+                    height: 40px;
+                }
+            }
+        }
+    }
+    .container{
+        .row{
+            .col-md-12{
+                position: relative;
+                .elect{
+                    h4{
+                        font-size:18px ;
+                        font-weight: 500;
+                        color: $grey-hed;
+                        padding-bottom: 10px;
+                        border-bottom: 1px solid $light-grey-2;
+                        position: relative;
+                    }
+                    :after{
+                        @include after;
+                    }
+                }
+                .nav{
+                    position: absolute;
+                    top: 0%;
+                    right: 70px;
+                    padding: 10px;
+                    .nav-item{
+                        a{
+                            color: $nav-grey;
+                            font-size:16px;
+                        }
+                        .active{
+                            color: $black-light;
+                            font-weight: 500;
+                        }
+                    }
+                }
+                .tab-content{
+                    .tab-pane{
+                        .owl-carousel-3{
+                            padding:20px 0;
+                            .crd-back{
+                                border: 1px solid $light-grey-2;
+                                .crd-main{
+                                    position: relative;
+                                    height: 420px;
+                                    &:hover{
+                                        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+                                    }
+                                    &:hover .btn-1{
+                                        visibility: visible;
+                                        opacity: 1;
+                                        transition: all 0.4s linear;
+                                        bottom: 100px;
+                                    }
+                                    &:hover .btn-3{
+                                        visibility: visible;
+                                        opacity: 1;
+                                    }
+                                    img{
+                                        padding: 20px;
+                                    }
+                                    .crd-content{
+                                        position: absolute;
+                                        top: 10px;
+                                        left: 20px;
+                                        h5{
+                                            text-transform: uppercase;
+                                            font-size:12px;
+                                            color: $header_color;
+                                        }
+                                        p{
+                                            font-size:15px;
+                                            width: 230px;
+                                            font-weight: 500;
+                                            color: $grey-black;
+                                            cursor: pointer;
+                                            &:hover{
+                                                color: $orange;
+                                            }
+                                        }
+                                    }
+                                    .hr-1{
+                                        width: 80%;
+                                        margin: 0 auto;
+                                    }
+                                    .crd-price{
+                                        display: flex;
+                                        justify-content: space-between;
+                                        padding: 10px;
+                                        span{
+                                            color: $orange;
+                                            font-weight: 500;
+                                            .far{
+                                                font-size:12px;
+                                            }
+                                        }
+                                    }
+                                    .btn-1{
+                                        position: absolute;
+                                        bottom: 35%;
+                                        left: 10%;
+                                        visibility: hidden;
+                                        opacity: 0;
+                                        button{
+                                            @include button;
+                                            background-color: $light-gray-3;
+                                            color: $black;
+                                            font-size:15px;
+                                            text-transform: uppercase;
+                                            font-weight: 500;
+                                            width: 215px;
+                                            &:hover{
+                                                background-color:$light-grey;
+                                                color: $white;
+                                            }
+                                        }
+                                    }
+                                    .btn-3{
+                                        visibility: hidden;
+                                        opacity: 0;
+                                        .but-1{
+                                            @include button;
+                                            width: 140px;
+                                            background-color: $red;
+                                            color: $white;
+                                            border-radius: 20px;
+                                            &:hover{
+                                                background-color: $dark_red;
+                                                color: $white;
+                                            }
+                                        }
+                                        .but-2{
+                                            @include button;
+                                            margin-left: 3px;
+                                            border: 1px solid $smoke;
+                                            border-radius: 50px;
+                                            width: 40px;
+                                            height: 40px;
+                                            &:hover{
+                                                background-color: $red;
+                                                color: $white;
+                                            }
+                                            &:hover .far{
+                                                background-color: $red;
+                                                color: $white;
+                                            }
+                                            .far{
+                                                transform: translate(-5px);
+                                                font-size:16px;
+                                                color: $red;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                            .owl-nav{
+                                .owl-prev{
+                                    position: absolute;
+                                    right: 40px;
+                                    top: -9%;
+                                    font-size:20px;
+                                    padding: 0 20px;
+                                    width: 20px;
+                                    background-color: $light-gray-3;
+                                }
+                                .owl-next{
+                                    position: absolute;
+                                    right: 10px;
+                                    top: -9%;
+                                    font-size:20px;
+                                    padding: 0 20px;
+                                    width: 20px;
+                                    background-color: $light-gray-3;
+                                }
+                            }
+                        }
+                    }
+                    .tab-pane{
+                        .product{
+                            .product-main{
+                                img{
+                                    width: 100%;
+                                    object-fit: cover;
+                                }
+                                .prod-text{
+                                    padding:0 25px;
+                                h4{
+                                    font-size:18px;
+                                    color: $title;
+                                }
+                                del{
+                                    font-size:14px;
+                                }
+                            }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .container{
+        .row{
+            .col-md-3{
+                .late{
+                    h4{
+                        position: relative;
+                        font-size:18px;
+                        color: $title;
+                        font-weight: 500;
+                        padding-bottom: 15px;
+                        border-bottom: 1px solid $light-gray-3;
+                    }
+                    :after{
+                        @include after;
+                    }
+                }
+                .owl-carousel{
+                    .card{
+                        height: 320px;
+                        .item{
+                            img{
+                                width: 100%;
+                                object-fit: cover;
+                                padding: 20px;
+                            }
+                            .content{
+                                padding:5px 10px;
+                                line-height: 20px;
+                                h4{
+                                    font-size:15px;
+                                    color: $del;
+                                    font-weight: 300;
+                                }
+                                p{
+                                    color: $black-light;
+                                    font-size:14px;
+                                }
+                                a{
+                                    text-decoration: none;
+                                    padding-bottom:15px ;
+                                    color: $orange;
+                                    border-bottom: 1px solid $orange;
+                                    width: 100%;
+                                    .fas{
+                                        font-size:14px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .owl-nav{
+                        .owl-prev{
+                            position: absolute;
+                            top: -12%;
+                            right: 30px;
+                            font-size:18px;
+                            background-color: $top_back;
+                            &:hover{
+                                background-color: $orange;
+                                color: $white !important;
+                            }
+                        }
+                        .owl-next{
+                            position: absolute;
+                            top: -12%;
+                            right: 0;
+                            font-size:18px;
+                            background-color: $top_back;
+                            &:hover{
+                                background-color: $orange;
+                                color: $white !important;
+                            }
+                        }
+                    }
+                }
+            }
+            .col-md-9{
+                .recent{
+                    h4{
+                        font-size:18px;
+                        color: $title;
+                        font-weight: bold;
+                        border-bottom: 1px solid $light-gray-3;
+                        padding-bottom: 15px;
+                        position: relative;
+                    }
+                    :after{
+                        @include after;
+                    }
+                }
+                .owl-carousel-6{
+                    .owl-items{
+                        .card{
+                            border: 1px solid $light-grey-2;
+                            border-radius: 0;
+                            width: 240px;
+                            &:hover{
+                                border: 1px solid $orange;
+                                border-radius: 0;
+                            }
+                            .crd-fl{
+                                img{
+                                    width: 120px;
+                                    height: auto;
+                                }
+                                .content{
+                                    padding: 17px;
+                                    h4{
+                                        font-size: 12px;
+                                        color: $header_color;
+                                        text-transform: uppercase;
+                                    }
+                                    p{
+                                        font-size: 13px;
+                                        color: $grey-black;
+                                        font-weight: 500;
+                                        margin-bottom: 5px;
+                                        cursor: pointer;
+                                        &:hover{
+                                            color: $orange;
+                                        }
+                                    }
+                                    .far{
+                                        font-size: 10px;
+                                    }
+                                    .price{
+                                        span{
+                                            color: $orange;
+                                            font-weight: 500;
+                                        }
+                                        del{
+                                            font-size: 13px;
+                                            color: $nav-grey;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                .owl-nav{
+                    position: absolute;
+                    top: -40px;
+                    right: 10px !important;
+                    .owl-prev,
+                    .owl-next{
+                        color: $black-light;
+                        font-size: 17px;
+                        font-weight: 500;
+                        margin-left: 10px;
+                        background-color: $light-gray-3;
+                        width: 20px;
+                        height: 25px;
+                    }
+                }
+            }
+        }
+    }
+    .container{
+        .row{
+            .col-md-12{
+                .owl-carousel{
+                    .owl-items{
+                        .all{
+                            width: 200px;
+                            height: 80px;
+                            img{
+                                width: 120px;
+                                height: 100px;
+                                object-fit: cover;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .foot{
+        background-color: $foot;
+        .container{
+            .row{
+                .col-md-3{
+                    .logo{
+                        padding: 25px 0 15px 0 ;
+                        img{
+                            width: 70%;
+                            object-fit: cover;
+                        }
+                    }
+                    p{
+                        color: $header_color;
+                        font-size: 14px;
+                    }
+                    address{
+                        font-size: 14px;
+                        color: $header_color;
+                    }
+                }
+                .col-md-2{
+                    h3{
+                        font-size: 16px;
+                        color: $black-light;
+                    }
+                    ul{
+                        padding-left: 0;
+                        li{
+                            padding: 5px 0;
+                            a{
+                                font-size: 14px;
+                                color: $header_color;
+                                &:hover{
+                                    color: $orange;
+                                }
+                            }
+                        }
+                    }
+                }
+                .col-md-3{
+                    h3{
+                        font-size: 16px;
+                        color: $grey-hed;
+                     span{
+                         font-size: 16px;
+                         color: $grey-black;
+                        }
+                    }
+                    .text-5{
+                        font-size: 14px;
+                        color: $small;
+                        padding: 20px 0;
+                    } 
+                    .input-group{
+                        input[type=text]{
+                            border-radius:30px 0 0 30px;
+                            background-color: $smoke;
+                        }
+                        ::placeholder{
+                            font-size: 12px;
+                        }
+                        button{
+                            outline:none;
+                            border: none;
+                            color: $white;
+                            background-color: $orange;
+                            font-weight: 500;
+                            border-radius: 0 30px 30px 0;
+                            &:hover{
+                                background-color: $nav-color;
+                            }
+                        }
+                    }
+                    .footer-icon{
+                        padding:20px 0;
+                        h5{
+                            color: $black;
+                            font-size: 14px;
+                        }
+                        a{
+                            .fab{
+                                border: 1px solid $light-grey;
+                                border-radius: 50px;
+                                color: $black;
+                                width: 35px;
+                                height: 35px;
+                                font-size: 18px;
+                                padding: 8px;
+                                margin-left: 10px;
+                                &:hover{
+                                    background-color: $orange;
+                                    color: $white;
+                                }
+                            }
+                        }
+                    }  
+                }
+            }
+        }
+    }

@@ -1,0 +1,21 @@
+{
+  "name": "bootstrap_install",
+  "version": "1.0.0",
+  "description": "bootstrap with npm",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Junaid Ahmad Yaqoob",
+  "license": "ISC",
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.15.4",
+    "bootstrap": "^5.1.3",
+    "carousel": "^0.0.3",
+    "get-google-fonts": "^1.2.2",
+    "jquery": "^3.6.0",
+    "owl.carousel": "^2.3.4",
+    "slick": "^1.12.2",
+    "slider": "^1.0.4"
+  }
+}
